@@ -2,7 +2,7 @@
 
 body{
 text-align: center;
-background: green;
+background: white;
 font-family: sans-serif;
 margin:0px;
 padding: 0px;
@@ -119,7 +119,7 @@ padding: 0px;
 	width: 70%;
 	float: left;
 	
-	min-height: 450px;
+	min-height: 650px;
 	margin-right: 20px;
 }
 
@@ -175,4 +175,19 @@ input[type="text"]{
 	border: 1px solid #ccc;
 	padding:4px;
 	margin-bottom: 5px;
+}
+input[type="text"]:focus{
+	box-shadow: 0px 0px 5px #eee inset;
+}
+
+#footer{
+	background: #f7f7f7;
+	width: 100%;
+	height: 70px;
+	line-height: 65px;
+	color: #444;
+}
+#footer p{
+	margin:0px;
+	padding: 0px; 
 }

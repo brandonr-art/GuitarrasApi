@@ -5,6 +5,21 @@
 		<title>Guitarras</title>
 		<!-- Hola de estilos-->
 		<link rel="stylesheet" href="css/styles.css">
+							<script  type="text/javascript">	
+								window.addEventListener("load",function(event){
+									var template = document.getElementById("article-template");
+								
+										var articles = document.getElementById("articles");
+								for(var i=0; i<=5;i++){
+									var clonado = template.cloneNode(true);
+									//var h2 = clonado.getElementByIdTagName("h2")[0];
+									//h2.innerHtml = h2.textContent + ` `+i;
+									articles.appendChild(clonado);
+
+								}
+								});
+							</script>
+
 	</head>
 		<body>
 			<header id="header">
@@ -46,8 +61,26 @@
 			<div class="center">
 				<section id="content">
 					<h2>Ultimas guitarras</h2>
-						<!-- Listado de guitarras-->		
+
+
+							
+
+						<!-- Listado de guitarras-->
+							<div id="articles">
+						<article class="article-item" id="article-template">
+							<div class="image-wrap">
+								<img src="https://m.media-amazon.com/images/I/31yGZ+lDZVL.jpg" alt="Guitarra">
+							</div>
+							<h2>Guitarra de prueba</h2>
+							<span class="date">
+								Hace 4 minutos
+							</span>
+							<a href="#">Leer mas</a>
+						</article>	
+						</div>	
 				</section>
+							
+
 				<aside id="sidebar">
 					<div id="nav-blog" class="sidebar-item">
 						<h3>Puedes hacer esto</h3>
@@ -73,4 +106,6 @@
 				</p>
 			</footer>
 		</body>
+							
+
 </html>
