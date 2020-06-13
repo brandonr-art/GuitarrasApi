@@ -190,4 +190,5 @@ input[type="text"]:focus{
 #footer p{
 	margin:0px;
 	padding: 0px; 
+	background: #eee;
 }
