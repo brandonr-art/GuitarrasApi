@@ -5,22 +5,7 @@
 		<title>Guitarras</title>
 		<!-- Hola de estilos-->
 		<link rel="stylesheet" href="css/styles.css">
-							<script  type="text/javascript">	
-								window.addEventListener("load",function(event){
-									var template = document.getElementById("article-template");
-								
-										var articles = document.getElementById("articles");
-								for(var i=0; i<=5;i++){
-									var clonado = template.cloneNode(true);
-									clonado.removeAttribute("id");
-									var h2 = clonado.getElementsByTagName("h2")[0];
-									h2.innerHTML = h2.textContent + ' '+i;
-									articles.appendChild(clonado);
-
-								}
-								});
-							</script>
-
+							
 	</head>
 		<body>
 			<header id="header">
@@ -43,7 +28,7 @@
 							<li>
 								<a href="articles.html">Modificar</a>
 							</li>
-							
+						
 						</ul>
 					</nav>
 					<!-- Limpiar floats-->
@@ -51,27 +36,25 @@
 				</div>
 				
 			</header>
-			<div id="slidder" class="slider-big">
-				<h1>ESTAMOS EN EL INICIO DE LA PAGINA</h1>
-			</div>
+			
 			<div class="center">
 				<section id="content">
-					<h2 class="subheader">Ultimas guitarras</h2>
-
-
-							
 
 						<!-- Listado de guitarras-->
 							<div id="articles">
-						<article class="article-item" id="article-template">
+							<article class="article-item article-item-detail">
+								<h1 class="subheader">Guitarra de prueba</h1>
 							<div class="image-wrap">
 								<img src="https://m.media-amazon.com/images/I/31yGZ+lDZVL.jpg" alt="Guitarra">
 							</div>
-							<h2>Guitarra de prueba</h2>
+							
 							<span class="date">
 								Hace 4 minutos
 							</span>
-							<a href="#">Leer mas</a>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quod, modi! Suscipit placeat vitae impedit, harum voluptas temporibus, earum amet adipisci cupiditate autem molestias eum aperiam magni, reprehenderit totam natus!
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quod, modi! Suscipit placeat vitae impedit, harum voluptas temporibus, earum amet adipisci cupiditate autem molestias eum aperiam magni, reprehenderit totam natus!
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio quod, modi! Suscipit placeat vitae impedit, harum voluptas temporibus, earum amet adipisci cupiditate autem molestias eum aperiam magni, reprehenderit totam natus!
+							</p>
 							<div class="clearfix"></div>
 						</article>	
 						</div>	

@@ -5,22 +5,7 @@
 		<title>Guitarras</title>
 		<!-- Hola de estilos-->
 		<link rel="stylesheet" href="css/styles.css">
-							<script  type="text/javascript">	
-								window.addEventListener("load",function(event){
-									var template = document.getElementById("article-template");
-								
-										var articles = document.getElementById("articles");
-								for(var i=0; i<=5;i++){
-									var clonado = template.cloneNode(true);
-									clonado.removeAttribute("id");
-									var h2 = clonado.getElementsByTagName("h2")[0];
-									h2.innerHTML = h2.textContent + ' '+i;
-									articles.appendChild(clonado);
-
-								}
-								});
-							</script>
-
+							
 	</head>
 		<body>
 			<header id="header">
@@ -43,7 +28,7 @@
 							<li>
 								<a href="articles.html">Modificar</a>
 							</li>
-							
+						
 						</ul>
 					</nav>
 					<!-- Limpiar floats-->
@@ -51,30 +36,52 @@
 				</div>
 				
 			</header>
-			<div id="slidder" class="slider-big">
-				<h1>ESTAMOS EN EL INICIO DE LA PAGINA</h1>
-			</div>
+			
 			<div class="center">
 				<section id="content">
-					<h2 class="subheader">Ultimas guitarras</h2>
-
-
-							
 
 						<!-- Listado de guitarras-->
-							<div id="articles">
-						<article class="article-item" id="article-template">
-							<div class="image-wrap">
-								<img src="https://m.media-amazon.com/images/I/31yGZ+lDZVL.jpg" alt="Guitarra">
-							</div>
-							<h2>Guitarra de prueba</h2>
-							<span class="date">
-								Hace 4 minutos
-							</span>
-							<a href="#">Leer mas</a>
-							<div class="clearfix"></div>
-						</article>	
-						</div>	
+							<h1 class="subheader">Formulario</h1>
+							<form class="mid-form">
+								<div class="form-group">
+									<label for="Modelo">Modelo</label>
+									<input type="text" name="Modelo">
+								</div>
+								<div class="form-group">
+									<label for="Marca">Marca</label>
+									<input type="text" name="Marca">
+								</div>
+								<div class="form-group">
+									<label for="Color">Color</label>
+									<input type="text" name="Color">
+								</div>
+								<div class="form-group">
+									<label for="Largo">Largo</label>
+									<input type="text" name="Largo">
+								</div>
+								<div class="form-group">
+									<label for="Ancho">Ancho</label>
+									<input type="text" name="Ancho">
+								</div>
+								<div class="form-group">
+									<label for="Peso">Peso</label>
+									<input type="text" name="Peso">
+								</div>
+								<div class="form-group radiobuttons">
+									
+									<input type="radio" name="Tipo" value="Acustica">Acustica 
+									<input type="radio" name="Tipo" value="Electrica">Electrica 
+									<input type="radio" name="Tipo" value="Electroacustica">Electroacustica 
+
+								</div>
+								<div class="clearfix"></div>
+								
+								<div class="form-group">
+									<label for="NumCuerdas">Numero de cuerdas</label>
+									<input type="text" name="NumCuerdas">
+								</div>
+								<input type="submit" value="Enviar" class="btn btn-success">
+							</form>
 				</section>
 							
 
