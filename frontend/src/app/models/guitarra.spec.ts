@@ -1,7 +1,7 @@
-import { Guitara } from './guitara';
+import { Guitarra } from './guitarra';
 
 describe('Guitara', () => {
   it('should create an instance', () => {
-    expect(new Guitara()).toBeTruthy();
+    expect(new Guitarra()).toBeTruthy();
   });
 });
