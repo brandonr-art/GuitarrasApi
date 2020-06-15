@@ -3,9 +3,43 @@
         <div class="col s5">
             <div class="cuadro">
                 <div class="contenido-cuadro">
-                    <form #guitarraForm= "ngForm" (ngSubmit)="addGuitarra(guitarraForm)">
-
-                    </form> 
+                    <h1 class="subheader">Formulario</h1>
+                    <form class="mid-form">
+                        <div class="form-group">
+                            <label for="Modelo">Modelo</label>
+                            <input type="text" name="Modelo">
+                        </div>
+                        <div class="form-group">
+                            <label for="Marca">Marca</label>
+                            <input type="text" name="Marca">
+                        </div>
+                        <div class="form-group">
+                            <label for="Color">Color</label>
+                            <input type="text" name="Color">
+                        </div>
+                        <div class="form-group">
+                            <label for="Largo">Largo</label>
+                            <input type="text" name="Largo">
+                        </div>
+                        <div class="form-group">
+                            <label for="Ancho">Ancho</label>
+                            <input type="text" name="Ancho">
+                        </div>
+                        <div class="form-group">
+                            <label for="Peso">Peso</label>
+                            <input type="text" name="Peso">
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                        
+                        <div class="form-group">
+                            <label for="NumCuerdas">Numero de cuerdas</label>
+                            <input type="text" name="NumCuerdas">
+                        </div>
+                        <input type="submit" value="Enviar" class="btn btn-success">
+                    </form>
+			
+                    
                 </div>
             </div>
         </div>
@@ -14,4 +48,4 @@
         </div>
 
     </div>
-</div>                
+</div>

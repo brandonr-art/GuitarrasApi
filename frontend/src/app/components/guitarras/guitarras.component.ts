@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-guitarras',
@@ -8,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class GuitarrasComponent implements OnInit {
 
   constructor() { }
-
+    
   ngOnInit(): void {
   }
 

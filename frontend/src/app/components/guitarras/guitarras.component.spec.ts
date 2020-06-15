@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import {NgForm} from '@angular/forms';
 import { GuitarrasComponent } from './guitarras.component';
 
 describe('GuitarrasComponent', () => {
