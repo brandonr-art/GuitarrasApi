@@ -9,7 +9,7 @@ export class GuitarraService {
 
   selectedGuitarra: Guitarra;
   guitarras: Guitarra[];
-  readonly URL_API = 'http://localhost:3000/api/guitarras';
+  readonly URL_API = 'http://localhost:3000/guitarras';
 
   constructor(private http: HttpClient) { }
 
