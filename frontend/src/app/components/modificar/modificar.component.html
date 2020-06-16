@@ -1,8 +1,10 @@
-<app-slider
+<!-- <app-slider
       [nombre]="'Modifica una guitarra'"
       [size]="'small'"
       
-></app-slider>
+></app-slider> -->
+
+<div class="container">
 <div class="col s6">
     <table class="striped highlight black-text">
       <thead>
@@ -41,14 +43,14 @@
     </table>
 
   </div>
-
+</div>
   <!-- <div id="article-item" *ngFor="let guitarra of guitarraService.guitarras">
       <h4>{{ guitarra.id }}</h4>
       <h4>{{ guitarra.marca }}</h4>
         
-    {{url+'get/'+guitarra.imagen}}
+    
   </div> -->
-
+<!-- 
   <div id="articles">
     <article class="article-item" *ngFor="let guitarra of guitarraService.guitarras">
         <div class="image-wrap">
@@ -65,29 +67,5 @@
         <div class="clearfix"></div>
     </article>	
     </div>	
-
-
-
-<!-- 
-<div *ngIf="guitarras.length >= 1">
-    hay muchas guitarras en el array
-    <div id="articles" *ngIf="guitarras">
-        
-            <article class="article-item" *ngFor="let guitarra of guitarras; let i = id">
-                <div class="image-wrap">
-                    <img src="{{guitarra.imagen}}" alt="{{guitarra.marca}}">
-                </div>
-                <h2>{{guitarra.modelo}}</h2>
-                <span class="date">
-                    {{guitarra.id}}
-                </span>
-                <a href="#">Leer mas</a>
-                <div class="clearfix"></div>
-            </article>	
-      
-       
-        </div>	 
-</div>
-
  -->
 

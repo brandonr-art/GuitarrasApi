@@ -11,14 +11,17 @@
       <div id="articles">
             <article class="article-item" *ngFor="let guitarra of guitarraService.guitarras">
                 <div class="image-wrap">
-                    <img src="https://storage.leverade.com/licenses/images/191352053e9d9455d211c8d436847bd98d30cedd.60x60.jpg" alt="{{ guitarra.marca }}">
+                    <img src="{{url+'get/'+guitarra.id}}" alt="{{ guitarra.marca }}">
                 </div>
                 <h2>{{guitarra.modelo}}</h2>
                 <span class="date">
-                    {{ guitarra.id }}
-                    {{ guitarra.modelo }}
-                    {{ guitarra.color }}
-                    {{ guitarra.peso }}
+                    {{ guitarra.id }} <br>
+                    {{ guitarra.marca }} <br>
+                    {{ guitarra.color }} <br>
+                    {{ guitarra.peso }} <br>
+                    {{ guitarra.largo }}<br>
+                    {{ guitarra.ancho }}<br>
+                    {{ guitarra.numCuerdas }}<br>
                 </span>
                 <a href="#">Leer mas</a>
                 <div class="clearfix"></div>

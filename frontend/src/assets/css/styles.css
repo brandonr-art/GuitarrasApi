@@ -280,11 +280,13 @@ display: block;
 }
 .article-item .image-wrap{
 	width: 130px;
-	height: 130px;
-	overflow: hidden;
-	float: left;
-	margin-right: 15px;
-	border: 1px solid #eee;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-left: 20px;
+    border: 1px solid #eee;
 }
 
 .article-item .image-wrap img{
@@ -309,6 +311,7 @@ display: block;
 	color:#444;
 	text-decoration: none;
 	margin-top: 10px;
+	margin-left: 18px;
 }
 .article-item a:hover{
 	text-decoration: underline;
