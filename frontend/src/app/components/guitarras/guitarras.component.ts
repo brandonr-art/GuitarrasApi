@@ -19,7 +19,9 @@ export class GuitarrasComponent implements OnInit {
   }
 
   addGuitarra(form: NgForm){
-    console.log(form.value);
+    this.guitarraService.postGuitarra(form.value).subscribe(res =>{
+      console.log(res);
+    })
   }
     resetForm(form?: NgForm){
       if(form){
