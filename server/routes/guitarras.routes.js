@@ -35,7 +35,8 @@ router.post('/', (req, res, next) => {
         ancho: req.body.ancho,
         peso: req.body.peso,
         tipo: req.body.tipo,
-        numCuerdas: req.body.numCuerdas
+        numCuerdas: req.body.numCuerdas,
+        imagen: req.body.imagen
       });
       guitar.save((err, datos) => {
         if (err)

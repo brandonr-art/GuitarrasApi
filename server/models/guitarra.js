@@ -11,7 +11,8 @@ var guitarraSchema = new Schema({
     ancho: {type: Number},
     peso: {type: Number},
     tipo: {type: String},
-    numCuerdas: {type: Number}
+    numCuerdas: {type: Number},
+    imagen: {type: String}
 
 });
 
