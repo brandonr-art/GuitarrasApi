@@ -15,6 +15,8 @@ import { CrearComponent } from './components/crear/crear.component';
 import { ModificarComponent } from './components/modificar/modificar.component';
 import { EliminarComponent } from './components/eliminar/eliminar.component';
 import { ErrorComponent } from './components/error/error.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ErrorComponent } from './components/error/error.component';
     CrearComponent,
     ModificarComponent,
     EliminarComponent,
-    ErrorComponent
+    ErrorComponent,
+    SliderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
