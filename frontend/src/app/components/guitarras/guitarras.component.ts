@@ -13,7 +13,7 @@ declare var M: any;
 })
 export class GuitarrasComponent implements OnInit {
 
-  constructor(private guitarraService: GuitarraService) { }
+  constructor(public guitarraService: GuitarraService) { }
     
   ngOnInit(): void {
     this.getGuitarras();

@@ -6,20 +6,21 @@
                 <strong>Guitarras</strong>API
             </span>
         <!-- Menu-->
-
+[]
         <nav id="Menu">
             <ul>
                 <li>
-                    <a href="index.html">Inicio</a>
+                   <!--  <a [routerlink]="['/inicio']">Inicio</a> -->
+                   <a [routerLink]="['/inicio']" [routerLinkActive]="['active']">inicio</a>
                 </li>
                 <li>
-                    <a href="crear.html">Crear</a>
+                    <a [routerLink]="['/modificar']" [routerLinkActive]="['active']">modificar</a>>
                 </li>
                 <li>
-                    <a href="articles.html">Modificar</a>
+                    <a [routerLink]="['/crear']"[routerLinkActive]="['active']" >crear</a>
                 </li>
                 <li>
-                    <a href="articles.html">Eliminar</a>
+                    <a [routerLink]="['/eliminar']" [routerLinkActive]="['active']">eliminar</a>
                 </li>
                 
             </ul>
