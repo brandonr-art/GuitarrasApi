@@ -5,7 +5,7 @@ import { Guitarra}  from '../models/guitarra';
 @Injectable({
   providedIn: 'root'
 })
-export class GuitarraService {
+export  class GuitarraService {
 
   selectedGuitarra: Guitarra;
   guitarras: Guitarra[];

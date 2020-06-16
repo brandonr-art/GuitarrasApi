@@ -79,8 +79,8 @@ padding: 0px;
 		display: inline-block;
 		list-style:none;
 		height: 90%;
-		margin-left: 10px;
-		margin-right: 20px;
+		margin-left: 5px;
+		margin-right: 10px;
 		
 
 
@@ -90,7 +90,7 @@ padding: 0px;
 	text-decoration: none;
 	color: black;
 	transition:300ms all;
-	font-size: 29px;
+	font-size: 19px;
 }
 #Menu a:hover{
 	
