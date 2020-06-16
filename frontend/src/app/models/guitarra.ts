@@ -1,7 +1,7 @@
 export class Guitarra {
 
-    constructor(_id= 0, modelo = '', marca = '', color= '', largo = 0, ancho= 0, peso= 0, tipo= '', numCuerdas = 0){
-        this._id =_id;
+    constructor(id= 0, modelo = '', marca = '', color= '', largo = 0, ancho= 0, peso= 0, tipo= '', numCuerdas = 0){
+        this.id =id;
         this.modelo = modelo;
         this.marca =marca;
         this.color = color;
@@ -13,7 +13,7 @@ export class Guitarra {
 
     }
     
-    _id:  Number;
+    id:  Number;
     modelo: String;
     marca:  String;
     color:  String;
