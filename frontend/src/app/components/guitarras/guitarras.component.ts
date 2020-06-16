@@ -3,7 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import {GuitarraService} from '../../services/guitarra.service';
 import { Guitarra } from 'src/app/models/guitarra';
 
-
+declare var M: any;
 
 @Component({
   selector: 'app-guitarras',
@@ -19,14 +19,26 @@ export class GuitarrasComponent implements OnInit {
    }
     
   ngOnInit(): void {
+    this.getGuitarras();
   }
 
+  
   addGuitarra(form: NgForm){
     this.guitarraService.postGuitarra(form.value).subscribe(res =>{
-      console.log(res);
+      this.resetForm(form);
+      M.toast({html: 'guardado'});
     })
   }
-    resetForm(form?: NgForm){
+  getGuitarras(){
+    this.guitarraService.getGuitarras()
+    .subscribe(res =>{
+      this.guitarraService.guitarras = res as Guitarra[];
+      console.log(res);
+    })
+
+  }
+
+  resetForm(form?: NgForm){
       if(form){
       form.reset();
       this.guitarraService.selectedGuitarra = new Guitarra();
