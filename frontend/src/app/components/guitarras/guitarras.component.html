@@ -1,91 +1,129 @@
 <div class="container">
-    <div class="row">
-      <div class="col s12">
-  <div class="container" id="contenedor_tabla">
-    <div class="row">
-      <div class="col s12">
+  <div class="row">
+    <div class="col s12">
+      <div class="container" id="contenedor_tabla">
+        <div class="row">
+          <div class="col s12">
 
-        <div class="card">
-          <div class="card-content">
-            <form #guitarraForm="ngForm" (ngSubmit)="addGuitarra(guitarraForm)">
-                <label for="id">Id</label><br />
-                <input type="text" name="id" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.id" />
-                <br />
-                <label for="marca">Marca</label><br />
-                <input type="text" name="marca" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.marca" />
-                <br />
-                <label for="modelo">Modelo</label><br />
-                <input type="text" name="modelo" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.modelo" />
-                <br />
-                <label for="color">Color</label><br />
-                <input type="text" name="color" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.color" />
-                <br />
-                <label for="color">Largo</label><br />
-                <input type="text" name="largo" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.largo" />
-                <br />
-                <label for="color">Ancho</label><br />
-                <input type="text" name="ancho" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.ancho" />
-                <br />
-                <label for="color">Peso</label><br />
-                <input type="text" name="peso" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.peso" />
-                <br />
-                <label for="color">Tipo</label><br />
-                <input type="text" name="tipo" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.tipo" />
-                <br />
-                <label for="color">numCuerdas</label><br />
-                <input type="text" name="numCuerdas" #name="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.numCuerdas" />
-                <br />
-                <div class="card-action">
-                  <div class="input-field col-s11">
-                    <button class="btn right" style="line-height: 3px;" (click)="resetForm(guitarraForm)">Clean</button>
-                    <button class="btn right" style="line-height: 3px;">Save</button>
+            <div class="card">
+              <div class="card-content">
+                <form #guitarraForm="ngForm" (ngSubmit)="addGuitarra(guitarraForm)">
+                  <label for="id">Id</label><br />
+                  <input type="text" name="id" #id="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.id"
+                    required />
+
+                  <br />
+                  <label for="marca">Marca</label><br />
+                  <input type="text" name="marca" #marca="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.marca"
+                    required />
+                  <br />
+                  <label for="modelo">Modelo</label><br />
+                  <input type="text" name="modelo" #modelo="ngModel"
+                    [(ngModel)]="guitarraService.selectedGuitarra.modelo" required />
+                  <br />
+                  <label for="color">Color</label><br />
+                  <input type="text" name="color" #color="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.color"
+                    required />
+                  <br />
+                  <label for="color">Largo</label><br />
+                  <input type="text" name="largo" #largo="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.largo"
+                    required />
+                  <br />
+                  <label for="color">Ancho</label><br />
+                  <input type="text" name="ancho" #ancho="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.ancho"
+                    required />
+                  <br />
+                  <label for="color">Peso</label><br />
+                  <input type="text" name="peso" #peso="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.peso"
+                    required />
+                  <br />
+                  <label for="color">Tipo</label><br />
+                  <input type="text" name="tipo" #tipo="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.tipo"
+                    required />
+                  <br />
+                  <label for="color">numCuerdas</label><br />
+                  <input type="text" name="numCuerdas" #numCuerdas="ngModel"
+                    [(ngModel)]="guitarraService.selectedGuitarra.numCuerdas" required />
+                  <br />
+                  <div class="card-action">
+                    <div class="input-field col-s11">
+                      <button class="btn right" style="line-height: 3px;"
+                        (click)="resetForm(guitarraForm)">Clean</button>
+                      <button class="btn right" style="line-height: 3px;" [disabled]="guitarraForm.invalid">Save</button>
+                    </div>
+
                   </div>
-                
-                </div>
-            </form>
-        </div>
-          
+                </form>
+                <small *ngIf="!id.valid && id.touched">
+                  el id no es vaalido
+                </small>
+                <small *ngIf="!marca.valid && id.touched">
+                  el marca no es vaalido
+                </small>
+                <small *ngIf="!modelo.valid && id.touched">
+                  el mdoelo no es vaalido
+                </small>
+                <small *ngIf="!color.valid && id.touched">
+                  el color no es vaalido
+                </small>
+                <small *ngIf="!largo.valid && id.touched">
+                  el largo no es vaalido
+                </small>
+                <small *ngIf="!ancho.valid && id.touched">
+                  el ancho no es vaalido
+                </small>
+                <small *ngIf="!peso.valid && id.touched">
+                  el peso no es vaalido
+                </small>
+                <small *ngIf="!tipo.valid && id.touched">
+                  el tipo no es vaalido
+                </small>
+                <small *ngIf="!numCuerdas.valid && id.touched">
+                  el numCuerdas no es vaalido
+                </small>
+              </div>
 
-       
 
-        <div class="col s6">
-            <table class="striped highlight black-text">
-              <thead>
-                <th>id</th>
-                <th>marca</th>
-                <th>modelo</th>
-                <th>color</th>
-                <th>largo</th>
-                <th>ancho</th>
-                <th>peso</th>
-                <th>tipo</th>
-                <th>N.Cuerdas</th>
-              </thead>
-              <tbody>
-                <tr *ngFor="let guitarra of guitarraService.guitarras">
-                  <td>{{ guitarra.id }}</td>
-                  <td>{{ guitarra.marca }}</td>
-                  <td>{{ guitarra.modelo }}</td>
-                  <td>{{ guitarra.color }}</td>
-                  <td>{{ guitarra.largo }}</td>
-                  <td>{{ guitarra.ancho }}</td>
-                  <td>{{ guitarra.peso }}</td>
-                  <td>{{ guitarra.tipo }}</td>
-                  <td>{{ guitarra.numCuerdas }}</td>
-                  <td>
-                    <a (click)="editGuitarra(guitarra)">
-                      <i class="material-icons">edit</i>
-                    </a>
-                   <!--  Esto va dentro del deleted pero el metodo esta mal en el guitarra.component ", guitarraForm  "-->
-                    <a (click)="deleteGuitarra(guitarra._id)">
-                      <i class="material-icons">delete</i>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
 
+
+              <div class="col s6">
+                <table class="striped highlight black-text">
+                  <thead>
+                    <th>id</th>
+                    <th>marca</th>
+                    <th>modelo</th>
+                    <th>color</th>
+                    <th>largo</th>
+                    <th>ancho</th>
+                    <th>peso</th>
+                    <th>tipo</th>
+                    <th>N.Cuerdas</th>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let guitarra of guitarraService.guitarras">
+                      <td>{{ guitarra.id }}</td>
+                      <td>{{ guitarra.marca }}</td>
+                      <td>{{ guitarra.modelo }}</td>
+                      <td>{{ guitarra.color }}</td>
+                      <td>{{ guitarra.largo }}</td>
+                      <td>{{ guitarra.ancho }}</td>
+                      <td>{{ guitarra.peso }}</td>
+                      <td>{{ guitarra.tipo }}</td>
+                      <td>{{ guitarra.numCuerdas }}</td>
+                      <td>
+                        <a (click)="editGuitarra(guitarra)">
+                          <i class="material-icons">edit</i>
+                        </a>
+                        <!--  Esto va dentro del deleted pero el metodo esta mal en el guitarra.component ", guitarraForm  "-->
+                        <a (click)="deleteGuitarra(guitarra._id)">
+                          <i class="material-icons">delete</i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-</div>   
