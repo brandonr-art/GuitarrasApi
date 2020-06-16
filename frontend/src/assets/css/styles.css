@@ -282,7 +282,9 @@ display: block;
 	width: 130px;
     height: 200px;
     overflow: hidden;
-    float: left;
+	float: left;
+
+	
     margin-top: 10px;
     margin-right: 15px;
     margin-left: 20px;
@@ -291,6 +293,8 @@ display: block;
 
 .article-item .image-wrap img{
 	height: 100%;
+	box-shadow: white;
+	border-radius:15px;
 	text-align: center;
 }
 .article-item h2{
@@ -302,8 +306,10 @@ display: block;
 }
 .article-item .date{
 	display: block;
-	width: 100%;
-	color: #716E6E;
+	width: 50%;
+	font-style: inherit;
+	
+	color:#000000;
 }
 
 .article-item a{
