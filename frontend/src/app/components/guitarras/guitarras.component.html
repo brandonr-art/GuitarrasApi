@@ -44,6 +44,9 @@
                   <label for="color">numCuerdas</label><br />
                   <input type="text" name="numCuerdas" #numCuerdas="ngModel"
                     [(ngModel)]="guitarraService.selectedGuitarra.numCuerdas" required />
+                    <label for="color">URL</label><br />
+                  <input type="text" name="URL" #URL="ngModel"
+                    [(ngModel)]="guitarraService.selectedGuitarra.imagen" required />
                   <br />
                   <div class="card-action">
                     <div class="input-field col-s11">
@@ -85,7 +88,7 @@
 
 
 
-
+<!-- tabla 
               <div class="col s6">
                 <table class="striped highlight black-text">
                   <thead>
@@ -114,7 +117,12 @@
                         <a (click)="editGuitarra(guitarra)">
                           <i class="material-icons">edit</i>
                         </a>
-                        <!--  Esto va dentro del deleted pero el metodo esta mal en el guitarra.component ", guitarraForm  "-->
+                        
+                        *********************Aqui ************************************ modifique el parametro del 
+                        delete FEDE ************************ no estoy seguro que iba aqui, pero lo hice para que funcionara
+                        ************************************************
+
+                        
                         <a (click)="deleteGuitarra(guitarra._id)">
                           <i class="material-icons">delete</i>
                         </a>
@@ -122,8 +130,11 @@
                     </tr>
                   </tbody>
                 </table>
-
               </div>
+
+
+              Aqui va la tabla -->
+
             </div>
           </div>
         </div>

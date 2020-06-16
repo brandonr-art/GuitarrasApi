@@ -1,5 +1,17 @@
-<app-slider
-      [nombre]="'Bienvenido...!'"
-      [size]="'big'"
+<!-- <app-slider [nombre]="'Bienvenido...!'" [size]="'big'">
 
-></app-slider>
+
+</app-slider> -->
+
+
+
+
+<div class="center">
+      <h2>Estoy intentando mostrar los articulos de la BD</h2>
+      <div class="article-item" *ngFor="let guitarra of guitarra">
+            <h2>{{guitarra.color}}</h2>
+            <h2>{{guitarra.marca}}</h2>
+            <h2>{{guitarra.modelo}}</h2>
+
+      </div>
+</div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient } from '@angular/common/http'
 import { Guitarra}  from '../models/guitarra';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,14 +10,14 @@ export  class GuitarraService {
 
   selectedGuitarra: Guitarra;
   guitarras: Guitarra[];
-  readonly URL_API = 'http://localhost:3000/guitarras';
+  public URL_API = 'http://localhost:3000/';
 
   constructor(private http: HttpClient) { 
     this.selectedGuitarra = new Guitarra();
   }
 
-  getGuitarras(){
-    return this.http.get('');
+  getGuitarras():Observable<any>{
+    return this.http.get(this.URL_API+'guitarras');
   }
   postGuitarra(Guitarra: Guitarra){
     return this.http.post(this.URL_API, Guitarra);

@@ -3,9 +3,72 @@
       [size]="'small'"
       
 ></app-slider>
+<div class="col s6">
+    <table class="striped highlight black-text">
+      <thead>
+        <th>id</th>
+        <th>marca</th>
+        <th>modelo</th>
+        <th>color</th>
+        <th>largo</th>
+        <th>ancho</th>
+        <th>peso</th>
+        <th>tipo</th>
+        <th>N.Cuerdas</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let guitarra of guitarraService.guitarras">
+          <td>{{ guitarra.id }}</td>
+          <td>{{ guitarra.marca }}</td>
+          <td>{{ guitarra.modelo }}</td>
+          <td>{{ guitarra.color }}</td>
+          <td>{{ guitarra.largo }}</td>
+          <td>{{ guitarra.ancho }}</td>
+          <td>{{ guitarra.peso }}</td>
+          <td>{{ guitarra.tipo }}</td>
+          <td>{{ guitarra.numCuerdas }}</td>
+          <td>
+            <a (click)="editGuitarra(guitarra)">
+              <i class="material-icons">edit</i>
+            </a>
+            <!--  Esto va dentro del deleted pero el metodo esta mal en el guitarra.component ", guitarraForm  "-->
+            <a (click)="deleteGuitarra(guitarra._id)">
+              <!-- <i class="material-icons">delete</i> -->
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-<h2>Guitarras</h2>
+  </div>
 
+  <!-- <div id="article-item" *ngFor="let guitarra of guitarraService.guitarras">
+      <h4>{{ guitarra.id }}</h4>
+      <h4>{{ guitarra.marca }}</h4>
+        
+    {{url+'get/'+guitarra.imagen}}
+  </div> -->
+
+  <div id="articles">
+    <article class="article-item" *ngFor="let guitarra of guitarraService.guitarras">
+        <div class="image-wrap">
+            <img src="https://storage.leverade.com/licenses/images/191352053e9d9455d211c8d436847bd98d30cedd.60x60.jpg" alt="{{ guitarra.marca }}">
+        </div>
+        <h2>{{guitarra.modelo}}</h2>
+        <span class="date">
+            {{ guitarra.id }}
+            {{ guitarra.modelo }}
+            {{ guitarra.color }}
+            {{ guitarra.peso }}
+        </span>
+        <a href="#">Leer mas</a>
+        <div class="clearfix"></div>
+    </article>	
+    </div>	
+
+
+
+<!-- 
 <div *ngIf="guitarras.length >= 1">
     hay muchas guitarras en el array
     <div id="articles" *ngIf="guitarras">
@@ -23,8 +86,8 @@
             </article>	
       
        
-        </div>	
+        </div>	 
 </div>
 
-
+ -->
 
