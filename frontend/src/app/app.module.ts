@@ -40,7 +40,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     HttpClientModule,
     routing
   ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders,GuitarraService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

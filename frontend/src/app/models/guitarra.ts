@@ -23,5 +23,5 @@ export class Guitarra {
     peso: Number;
     tipo:  String;
     numCuerdas:  Number;
-    imagen: string;
+    imagen: String;
 }

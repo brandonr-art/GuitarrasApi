@@ -20,7 +20,7 @@ export  class GuitarraService {
     return this.http.get(this.URL_API+'guitarras');
   }
   postGuitarra(Guitarra: Guitarra){
-    return this.http.post(this.URL_API, Guitarra);
+    return this.http.post('http://localhost:3000/'+'guitarras/', Guitarra);
   }
   putGuitarra(guitarra: Guitarra){
     return this.http.put(this.URL_API + '/${guitarra._id}', guitarra);
