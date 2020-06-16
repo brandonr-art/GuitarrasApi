@@ -34,8 +34,6 @@ padding: 0px;
 	animation:girar infinite 30s linear;
 }
 
-
-
 @keyframes girar{
 	from{
 		transform: rotate(0deg);
@@ -71,7 +69,7 @@ padding: 0px;
 
 
 #Menu ul{
-	margin-left: 20px;
+	margin-left: 2px;
 	width: 60%;
 	float: right;
 	
@@ -80,9 +78,9 @@ padding: 0px;
 #Menu ul li {
 		display: inline-block;
 		list-style:none;
-		height: 90px;
-		margin-left: 5px;
-		margin-right: 10px;
+		height: 90%;
+		margin-left: 10px;
+		margin-right: 20px;
 		
 
 
