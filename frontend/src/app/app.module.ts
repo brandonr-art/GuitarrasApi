@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {GuitarraService} from './services/guitarra.service';
 import { FormsModule } from '@angular/forms';
 import {GuitarrasComponent} from './components/guitarras/guitarras.component';
 import {routing, appRoutingProviders} from './app.routing';
