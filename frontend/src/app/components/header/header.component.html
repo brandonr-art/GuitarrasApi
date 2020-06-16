@@ -10,16 +10,17 @@
         <nav id="Menu">
             <ul>
                 <li>
-                    <a href="index.html">Inicio</a>
+                   <!--  <a [routerlink]="['/inicio']">Inicio</a> -->
+                   <a [routerLink]="['/inicio']">inicio</a>
                 </li>
                 <li>
-                    <a href="crear.html">Crear</a>
+                    <a [routerLink]="['/modificar']">modificar</a>>
                 </li>
                 <li>
-                    <a href="articles.html">Modificar</a>
+                    <a [routerLink]="['/crear']">crear</a>
                 </li>
                 <li>
-                    <a href="articles.html">Eliminar</a>
+                    <a [routerLink]="['/eliminar']">eliminar</a>
                 </li>
                 
             </ul>

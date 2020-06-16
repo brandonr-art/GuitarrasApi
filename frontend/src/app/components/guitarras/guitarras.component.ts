@@ -13,7 +13,7 @@ import { Guitarra } from 'src/app/models/guitarra';
 })
 export class GuitarrasComponent implements OnInit {
 
-  constructor(private guitarraService: GuitarraService) { }
+  constructor(public guitarraService: GuitarraService) { }
     
   ngOnInit(): void {
   }
