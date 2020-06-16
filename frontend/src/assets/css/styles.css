@@ -11,9 +11,9 @@ padding: 0px;
 
 #header{
 	margin:0px;
-	height: 120px;
+	height: 110px;
 	width: 100%;
-	background: white;
+	background:rgb(85, 97, 96);
 	border-bottom: 1px solid #ccc;
 	border-top: 1px solid #605D5D;
 }
@@ -29,7 +29,7 @@ padding: 0px;
 .app-logo{
 	display: block;
 	float: left;
-	height: 70px;
+	height: 60px;
 	margin-top: 32px;
 	animation:girar infinite 30s linear;
 }
@@ -47,9 +47,9 @@ padding: 0px;
 #brand{
 	display: block;
 	margin:0px;
-	margin-left: 15px;
+	margin-left: 5px;
 	margin-top: 48px;
-	font-size:40px;
+	font-size:30px;
 	float: left;
 }
 .center{
@@ -60,36 +60,43 @@ padding: 0px;
 	clear: both;
 	float: none;
 }
-#menu{
+#Menu{
 	width: 70%;
 	float: right;
-	font-size: 18px;
+	margin-top: 30px;
+
+	background: rgb(85, 97, 96);
+
 }
 
 
-#menu ul{
-	line-height: 85px;
+#Menu ul{
+	margin-left: 20px;
 	width: 60%;
 	float: right;
+	
+	
 }
-#menu ul li {
+#Menu ul li {
 		display: inline-block;
 		list-style:none;
-		height: 46px;
-		margin-left: 10px;
+		height: 90px;
+		margin-left: 5px;
 		margin-right: 10px;
+		
 
 
 }
 
-#menu a{
+#Menu a{
 	text-decoration: none;
-	color: #444;
+	color: black;
 	transition:300ms all;
+	font-size: 29px;
 }
-#menu a:hover{
+#Menu a:hover{
 	
-	color: #103DFF;
+	color: white;
 	
 }
 
