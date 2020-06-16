@@ -22,6 +22,7 @@ const appRoutes: Routes =[
     {path:'inicio',component:InicioComponent},
     {path:'crear',component:CrearComponent},
     {path:'eliminar',component:EliminarComponent},
+    {path:'modificar/:id',component:ModificarComponent},
     {path:'modificar',component:ModificarComponent},
     {path:'**',component:ErrorComponent}
 

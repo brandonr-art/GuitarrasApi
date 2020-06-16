@@ -12,8 +12,11 @@ import { Guitarra } from 'src/app/models/guitarra';
   providers: [GuitarraService]
 })
 export class GuitarrasComponent implements OnInit {
-
-  constructor(public guitarraService: GuitarraService) { }
+  public guitarras: Array<any>;
+  constructor(public guitarraService: GuitarraService) {
+    this.guitarras=[{id:16,modelo:"casiox99",marca:"casio",color:"negro",largo:16,
+    ancho:45,peso:45,tipo:"acustica",numCuerdas:6,imagen:"https://m.media-amazon.com/images/I/81fzKTcDNEL._AC_SS350_.jpg"}];
+   }
     
   ngOnInit(): void {
   }
