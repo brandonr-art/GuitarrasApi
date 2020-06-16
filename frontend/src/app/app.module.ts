@@ -18,6 +18,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     EliminarComponent,
     ErrorComponent,
     SliderComponent,
-    SidebarComponent
+    SidebarComponent,
+    
   ],
   imports: [
     BrowserModule,

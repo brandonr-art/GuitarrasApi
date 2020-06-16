@@ -16,7 +16,8 @@ export class ModificarComponent implements OnInit {
     this.guitarras=[{id:16,modelo:"casiox99",marca:"casio",color:"negro",largo:16,
     ancho:45,peso:45,tipo:"acustica",numCuerdas:6,imagen:"https://m.media-amazon.com/images/I/81fzKTcDNEL._AC_SS350_.jpg"},
     {id:12,modelo:"Fujix99",marca:"casio",color:"negro",largo:16,
-    ancho:45,peso:45,tipo:"acustica",numCuerdas:6,imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcShkotiWcu45WbVrGGBMYs089vEaSpGRvS1CIoLgD4aMBv9sE0y&usqp=CAU"}];
+    ancho:45,peso:45,tipo:"acustica",numCuerdas:6,imagen:"https://m.media-amazon.com/images/I/81fzKTcDNEL._AC_SS350_.jpg"}];
+
    }
 
   ngOnInit() {
