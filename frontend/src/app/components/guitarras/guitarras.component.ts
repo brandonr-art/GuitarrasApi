@@ -12,16 +12,21 @@ declare var M: any;
   providers: [GuitarraService]
 })
 export class GuitarrasComponent implements OnInit {
-  public guitarras: Array<any>;
+  
   constructor(public guitarraService: GuitarraService) {
-    this.guitarras=[{id:16,modelo:"casiox99",marca:"casio",color:"negro",largo:16,
-    ancho:45,peso:45,tipo:"acustica",numCuerdas:6,imagen:"https://m.media-amazon.com/images/I/81fzKTcDNEL._AC_SS350_.jpg"}];
+    
    }
     
   ngOnInit(): void {
     this.getGuitarras();
   }
+  editGuitarra(form: NgForm){
+    this.guitarraService.postGuitarra(form.value).subscribe(res =>{
+      this.resetForm(form);
+      M.toast({html: 'guardado'});
+    })
 
+  }
   
   addGuitarra(form: NgForm){
     this.guitarraService.postGuitarra(form.value).subscribe(res =>{
@@ -37,13 +42,21 @@ export class GuitarrasComponent implements OnInit {
     })
 
   }
+ 
 
   resetForm(form?: NgForm){
       if(form){
       form.reset();
       this.guitarraService.selectedGuitarra = new Guitarra();
+    }
+
+  }
+  deleteGuitarra(form: NgForm){
+    this.guitarraService.postGuitarra(form.value).subscribe(res =>{
+      this.resetForm(form);
+      M.toast({html: 'guardado'});
+    })
   }
 
 
-}
 }

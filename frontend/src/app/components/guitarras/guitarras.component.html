@@ -1,12 +1,10 @@
-<<<<<<< HEAD
 <div class="container">
     <div class="row">
-      <div class="col s4">
-=======
-<div class="container" id="contenedor_tabla">
-    <div class="row s3">
-      <div class="col s5">
->>>>>>> 94dffc147bff7f709c95f37a59565c343db595f1
+      <div class="col s12">
+  <div class="container" id="contenedor_tabla">
+    <div class="row">
+      <div class="col s12">
+
         <div class="card">
           <div class="card-content">
             <form #guitarraForm="ngForm" (ngSubmit)="addGuitarra(guitarraForm)">
@@ -46,8 +44,11 @@
                 </div>
             </form>
         </div>
+          
 
-        <div class="col s8">
+       
+
+        <div class="col s6">
             <table class="striped highlight black-text">
               <thead>
                 <th>id</th>
@@ -72,10 +73,11 @@
                   <td>{{ guitarra.tipo }}</td>
                   <td>{{ guitarra.numCuerdas }}</td>
                   <td>
-                    <a (click)="editEmployee(employee)">
+                    <a (click)="editGuitarra(guitarra)">
                       <i class="material-icons">edit</i>
                     </a>
-                    <a (click)="deleteEmployee(employee._id, employeeForm)">
+                   <!--  Esto va dentro del deleted pero el metodo esta mal en el guitarra.component ", guitarraForm  "-->
+                    <a (click)="deleteGuitarra(guitarra._id)">
                       <i class="material-icons">delete</i>
                     </a>
                   </td>
