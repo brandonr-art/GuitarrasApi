@@ -2,9 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
+import {GuitarrasComponent} from './components/guitarras/guitarras.component';
+
 
 import { AppComponent } from './app.component';
-import { GuitarrasComponent } from './components/guitarras/guitarras.component';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,8 @@ import { GuitarrasComponent } from './components/guitarras/guitarras.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

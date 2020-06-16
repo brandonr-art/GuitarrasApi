@@ -1,51 +1,46 @@
 <div class="container">
-    <div class="fila">
-        <div class="col s5">
-            <div class="cuadro">
-                <div class="contenido-cuadro">
-                    <h1 class="subheader">Formulario</h1>
-                    <form class="mid-form">
-                        <div class="form-group">
-                            <label for="Modelo">Modelo</label>
-                            <input type="text" name="Modelo">
-                        </div>
-                        <div class="form-group">
-                            <label for="Marca">Marca</label>
-                            <input type="text" name="Marca">
-                        </div>
-                        <div class="form-group">
-                            <label for="Color">Color</label>
-                            <input type="text" name="Color">
-                        </div>
-                        <div class="form-group">
-                            <label for="Largo">Largo</label>
-                            <input type="text" name="Largo">
-                        </div>
-                        <div class="form-group">
-                            <label for="Ancho">Ancho</label>
-                            <input type="text" name="Ancho">
-                        </div>
-                        <div class="form-group">
-                            <label for="Peso">Peso</label>
-                            <input type="text" name="Peso">
-                        </div>
-                        
-                        <div class="clearfix"></div>
-                        
-                        <div class="form-group">
-                            <label for="NumCuerdas">Numero de cuerdas</label>
-                            <input type="text" name="NumCuerdas">
-                        </div>
-                        <input type="submit" value="Enviar" class="btn btn-success">
-                    </form>
-			
-                    
+    <div class="row">
+      <div class="col s5">
+        <div class="card">
+          <div class="card-content">
+            <form #guitarraForm="ngForm" (ngSubmit)="addGuitarra(guitarraForm)">
+                <label for="id">Id</label><br />
+                <input name="id" type="text" ng-model="guitarraService.selectedGuitarra.id" />
+                <br />
+                <label for="marca">Marca</label><br />
+                <input name="marca" type="text" ng-model="guitarraService.selectedGuitarra.marca" />
+                <br />
+                <label for="modelo">Modelo</label><br />
+                <input name="modelo" type="text" ng-model="guitarraService.selectedGuitarra.modelo" />
+                <br />
+                <label for="color">Color</label><br />
+                <input name="color" type="text" ng-model="guitarraService.selectedGuitarra.color" />
+                <br />
+                <label for="color">Largo</label><br />
+                <input name="color" type="text" ng-model="guitarraService.selectedGuitarra.largo" />
+                <br />
+                <label for="color">Ancho</label><br />
+                <input name="color" type="text" ng-model="guitarraService.selectedGuitarra.ancho" />
+                <br />
+                <label for="color">Peso</label><br />
+                <input name="color" type="text" ng-model="guitarraService.selectedGuitarra.peso" />
+                <br />
+                <label for="color">Tipo</label><br />
+                <input name="color" type="text" ng-model="guitarraService.selectedGuitarra.tipo" />
+                <br />
+                <label for="color">numCuerdas</label><br />
+                <input name="color" type="text" ng-model="guitarraService.selectedGuitarra.numCuerdas" />
+                <br />
+                <div class="card-action">
+                  <div class="input-field col-s12">
+                    <button class="btn right" style="margin-left: 2px;" (click)="resetForm(guitarraForm)">Clean</button>
+                    <button class="btn right">Save</button>
+                  </div>
+                
                 </div>
-            </div>
+            </form>
         </div>
-        <div class="col s7">
-            
+          </div>
         </div>
-
-    </div>
-</div>
+      </div>
+</div>   

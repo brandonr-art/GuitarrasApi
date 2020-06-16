@@ -11,7 +11,9 @@ export class GuitarraService {
   guitarras: Guitarra[];
   readonly URL_API = 'http://localhost:3000/guitarras';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.selectedGuitarra = new Guitarra();
+  }
 
   getGuitarras(){
     return this.http.get('');
