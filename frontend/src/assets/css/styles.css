@@ -271,11 +271,12 @@ display: block;
 }
 
 .article-item{
-	width: 100%;
+	width: 50%;
 	border-bottom:  1px solid #eee;
+	border-right: 1px solid black;
 	padding-bottom: 0px;
 	padding-top: 0px;
-	margin-left: 35%;
+	margin-left: 550px;
 	text-align: left;	
 }
 .article-item .image-wrap{

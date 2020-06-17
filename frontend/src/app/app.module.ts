@@ -17,6 +17,7 @@ import { EliminarComponent } from './components/eliminar/eliminar.component';
 import { ErrorComponent } from './components/error/error.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ArticleComponent } from './components/article/article.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     ErrorComponent,
     SliderComponent,
     SidebarComponent,
+    ArticleComponent,
     
   ],
   imports: [
