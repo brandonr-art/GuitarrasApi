@@ -18,7 +18,7 @@ import { ErrorComponent } from './components/error/error.component';
 
 
 const appRoutes: Routes =[
-
+    {path:'',component:InicioComponent},
     {path:'inicio',component:InicioComponent},
     {path:'crear',component:CrearComponent},
     {path:'eliminar',component:EliminarComponent},
