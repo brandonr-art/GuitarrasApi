@@ -3,8 +3,95 @@
       [size]="'small'"
       
 ></app-slider> -->
+<div class="row">
+  <div class="col s2">
 
-<div class="col s10">
+    <div class="card">
+      <div class="card-content">
+        <form #guitarraForm="ngForm" (ngSubmit)="addGuitarra(guitarraForm)">
+          <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="guitarraService.selectedGuitarra._id" />
+          <label for="id">Id</label><br />
+          <input type="text" name="id" #id="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.id" required />
+
+          <br />
+          <label for="marca">Marca</label><br />
+          <input type="text" name="marca" #marca="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.marca"
+            required />
+          <br />
+          <label for="modelo">Modelo</label><br />
+          <input type="text" name="modelo" #modelo="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.modelo"
+            required />
+          <br />
+          <label for="color">Color</label><br />
+          <input type="text" name="color" #color="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.color"
+            required />
+          <br />
+          <label for="color">Largo</label><br />
+          <input type="text" name="largo" #largo="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.largo"
+            required />
+          <br />
+          <label for="color">Ancho</label><br />
+          <input type="text" name="ancho" #ancho="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.ancho"
+            required />
+          <br />
+          <label for="color">Peso</label><br />
+          <input type="text" name="peso" #peso="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.peso" required />
+          <br />
+          <label for="color">Tipo</label><br />
+          <input type="text" name="tipo" #tipo="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.tipo" required />
+          <br />
+          <label for="color">numCuerdas</label><br />
+          <input type="text" name="numCuerdas" #numCuerdas="ngModel"
+            [(ngModel)]="guitarraService.selectedGuitarra.numCuerdas" required />
+          <br />
+          <label for="color">Imagen</label><br />
+          <input type="text" name="imagen" #imagen="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.imagen"
+            required />
+          <br />
+          <div class="card-action">
+            <div class="input-field col-s11">
+              <!-- <button class="btn right" style="line-height: 3px;"
+                (click)="resetForm(guitarraForm)">Clean</button> -->
+              <button class="btn right" style="line-height: 3px;" [disabled]="guitarraForm.invalid">Save</button>
+            </div>
+
+          </div>
+        </form>
+        <small *ngIf="!id.valid && id.touched">
+          el id no es vaalido
+        </small>
+        <small *ngIf="!marca.valid && id.touched">
+          el marca no es vaalido
+        </small>
+        <small *ngIf="!modelo.valid && id.touched">
+          el mdoelo no es vaalido
+        </small>
+        <small *ngIf="!color.valid && id.touched">
+          el color no es vaalido
+        </small>
+        <small *ngIf="!largo.valid && id.touched">
+          el largo no es vaalido
+        </small>
+        <small *ngIf="!ancho.valid && id.touched">
+          el ancho no es vaalido
+        </small>
+        <small *ngIf="!peso.valid && id.touched">
+          el peso no es vaalido
+        </small>
+        <small *ngIf="!tipo.valid && id.touched">
+          el tipo no es vaalido
+        </small>
+        <small *ngIf="!numCuerdas.valid && id.touched">
+          el numCuerdas no es vaalido
+        </small>
+        <small *ngIf="!imagen.valid && id.touched">
+          el URL no es vaalido
+        </small>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
     <table class="striped highlight black-text">
       <thead>
         <th>id</th>
@@ -51,7 +138,7 @@
         
     
   </div> -->
-<!-- 
+  <!-- 
   <div id="articles">
     <article class="article-item" *ngFor="let guitarra of guitarraService.guitarras">
         <div class="image-wrap">
@@ -69,4 +156,3 @@
     </article>	
     </div>	
  -->
-

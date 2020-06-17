@@ -56,20 +56,27 @@ export class ModificarComponent implements OnInit {
     this._router.navigate(['/modificar',1]);
   }
 
-  editGuitarra(form: NgForm){
-    this.guitarraService.postGuitarra(form.value).subscribe(res =>{
-      this.resetForm(form);
-      M.toast({html: 'guardado'});
-    })
-
+  editGuitarra(guitarra:Guitarra){
+    this.guitarraService.selectedGuitarra = guitarra;
   }
   
   addGuitarra(form: NgForm){
-    this.guitarraService.postGuitarra(form.value).subscribe(res =>{
-      this.resetForm(form);
-      M.toast({html: 'guardado'});
-    })
-  }
+    if (form.value.modelo){
+      this.guitarraService.putGuitarra(form.value)
+      .subscribe(res =>{
+        console.log("Actualizado")
+      })
+        }else{
+    
+        this.guitarraService.postGuitarra(form.value).subscribe(res =>{
+          console.log(form.value);
+          this.resetForm(form);
+          
+               M.toast({html: 'guardado'});
+               this.getGuitarras();
+        });
+        }
+      }
   getGuitarras(){
     this.guitarraService.getGuitarras()
     .subscribe(res =>{
