@@ -49,7 +49,7 @@ router.post('/', (req, res, next) => {
 });
 
 //PATCH modifica documento por id
-router.patch('/:idGui', (req,res, next) => {
+router.put('/:idGui', (req,res, next) => {
     Guitarra.findOneAndUpdate({id:req.params.idGui},{$set:req.body},{new: true},(err, datos) => {
         if (err)
             res.status(404).json({mensaje:"Error al actualizar"});
