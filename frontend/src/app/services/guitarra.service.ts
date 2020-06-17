@@ -10,26 +10,25 @@ export  class GuitarraService {
 
   selectedGuitarra: Guitarra;
   guitarras: Guitarra[];
-  public URL_API = 'http://localhost:3000';
-  public URL_API_Remot = 'https://guitarras.herokuapp.com';
+  
 
   constructor(private http: HttpClient) { 
     this.selectedGuitarra = new Guitarra();
   }
 
   getGuitarras():Observable<any>{
-    return this.http.get(this.URL_API+'/guitarras' || this.URL_API_Remot+'/guitarras');
+    return this.http.get('/guitarras');
   }
   postGuitarra(Guitarra: Guitarra){
-    return this.http.post('http://localhost:3000/'+'guitarras/' || this.URL_API_Remot +'/guitarras/', Guitarra);
+    return this.http.post('guitarras/', Guitarra);
   }
   putGuitarra(guitarra: Guitarra){
-    /* return this.http.put(this.URL_API + '/guitarras/'+'{guitarra.id}', guitarra); */
+    /* return this.http.put('/guitarras/'+'{guitarra.id}', guitarra); */
 
-    return this.http.put(this.URL_API + '/guitarras/' +`${guitarra.id}` || this.URL_API_Remot + '/guitarras' +`/${guitarra.id}`, guitarra);
+    return this.http.put('/guitarras/' +`${guitarra.id}`, guitarra);
    
   }
   deleteGuitarra(id: string){
-    return this.http.delete(this.URL_API + '/guitarras' + `/${id}` || this.URL_API_Remot + '/guitarras' + `/${id}`)
+    return this.http.delete('/guitarras' + `/${id}`)
   }
 }
