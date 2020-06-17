@@ -35,20 +35,7 @@ export class ModificarComponent implements OnInit {
     this._route.params.subscribe((params:Params)=>{
         this.id = params.id;
     });
-    this.guitarraService.getGuitarras().subscribe(
-      response =>{
-        if(response){
-          this.guitarra = response.guitarra; 
-
-          console.log(response);
-        } else{
-          console.log("Falla mortal");
-        }
-      },
-      error =>{
-        console.log(error);
-      }
-    );
+    
   }
 
 
@@ -61,7 +48,7 @@ export class ModificarComponent implements OnInit {
   }
   
   addGuitarra(form: NgForm){
-    if (form.value.modelo){
+    if (form.value._id){
       this.guitarraService.putGuitarra(form.value)
       .subscribe(res =>{
         console.log("Actualizado")
