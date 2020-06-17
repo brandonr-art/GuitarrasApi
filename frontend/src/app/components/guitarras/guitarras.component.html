@@ -8,6 +8,9 @@
             <div class="card">
               <div class="card-content">
                 <form #guitarraForm="ngForm" (ngSubmit)="addGuitarra(guitarraForm)">
+
+                  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.id">
+
                   <label for="id">Id</label><br />
                   <input type="text" name="id" #id="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.id"
                     required />
@@ -92,7 +95,7 @@
 
 
 
-<!-- tabla 
+
               <div class="col s6">
                 <table class="striped highlight black-text">
                   <thead>
@@ -121,12 +124,7 @@
                         <a (click)="editGuitarra(guitarra)">
                           <i class="material-icons">edit</i>
                         </a>
-                        
-                        *********************Aqui ************************************ modifique el parametro del 
-                        delete FEDE ************************ no estoy seguro que iba aqui, pero lo hice para que funcionara
-                        ************************************************
-
-                        
+                                              
                         <a (click)="deleteGuitarra(guitarra._id)">
                           <i class="material-icons">delete</i>
                         </a>
@@ -137,7 +135,7 @@
               </div>
 
 
-              Aqui va la tabla -->
+            
 
             </div>
           </div>
