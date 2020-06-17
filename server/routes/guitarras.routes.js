@@ -51,8 +51,6 @@ router.post('/', (req, res, next) => {
 //PATCH modifica documento por id
 router.put('/:idGui', (req,res, next) => {
 
-    Guitarra.findOneAndUpdate({id:req.params.idGui},{$set:req.body},{new: true},(err, datos) => {
-
     Guitarra.findOneAndUpdate({id:req.params.idGui},{$set:{
         id: req.body.id,
         modelo: req.body.modelo,
