@@ -65,7 +65,7 @@ export class ModificarComponent implements OnInit {
       this.guitarraService.putGuitarra(form.value)
       .subscribe(res =>{
         console.log("Actualizado")
-      })
+      })  
         }else{
     
         this.guitarraService.postGuitarra(form.value).subscribe(res =>{
