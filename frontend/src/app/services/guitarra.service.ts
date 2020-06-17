@@ -11,7 +11,7 @@ export  class GuitarraService {
   selectedGuitarra: Guitarra;
   guitarras: Guitarra[];
   public URL_API = 'http://localhost:3000';
-  public URL_API_Remot = 'https://guitarrasApi.herokuapp.com';
+  public URL_API_Remot = 'https://guitarras.herokuapp.com';
 
   constructor(private http: HttpClient) { 
     this.selectedGuitarra = new Guitarra();
