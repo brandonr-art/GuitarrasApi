@@ -87,11 +87,14 @@ export class ModificarComponent implements OnInit {
     }
 
   }
-  deleteGuitarra(form: NgForm){
-    this.guitarraService.postGuitarra(form.value).subscribe(res =>{
-      this.resetForm(form);
-      M.toast({html: 'guardado'});
-    })
+  
+  deleteGuitarra(id : string){
+    if(confirm("¿Estas seguro de eliminar esa Guitarra?")){
+      this.guitarraService.deleteGuitarra(id).subscribe(res =>{
+        this.getGuitarras();
+      })
+    }
+    
   }
 
 }

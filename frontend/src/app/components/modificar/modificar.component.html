@@ -3,8 +3,8 @@
       [size]="'small'"
       
 ></app-slider> -->
-<div class="col s11">
-<div class="col s8">
+
+<div class="col s10">
     <table class="striped highlight black-text">
       <thead>
         <th>id</th>
@@ -35,8 +35,8 @@
               <i class="material-icons">edit</i>
             </a>
             <!--  Esto va dentro del deleted pero el metodo esta mal en el guitarra.component ", guitarraForm  "-->
-            <a (click)="deleteGuitarra(guitarra._id)">
-              <!-- <i class="material-icons">delete</i> -->
+            <a (click)="deleteGuitarra(guitarra.id)">
+              <i class="material-icons">delete</i>
             </a>
           </td>
         </tr>
@@ -44,7 +44,7 @@
     </table>
 
   </div>
-</div>
+
   <!-- <div id="article-item" *ngFor="let guitarra of guitarraService.guitarras">
       <h4>{{ guitarra.id }}</h4>
       <h4>{{ guitarra.marca }}</h4>
