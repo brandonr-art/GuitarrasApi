@@ -4,8 +4,7 @@
       
 ></app-slider> -->
 
-<div class="container">
-<div class="col s6">
+<div class="col s10">
     <table class="striped highlight black-text">
       <thead>
         <th>id</th>
@@ -16,6 +15,7 @@
         <th>ancho</th>
         <th>peso</th>
         <th>tipo</th>
+        <th>Imagen</th>
         <th>N.Cuerdas</th>
       </thead>
       <tbody>
@@ -28,6 +28,7 @@
           <td>{{ guitarra.ancho }}</td>
           <td>{{ guitarra.peso }}</td>
           <td>{{ guitarra.tipo }}</td>
+          <td>{{ guitarra.imagen }}</td>
           <td>{{ guitarra.numCuerdas }}</td>
           <td>
             <a (click)="editGuitarra(guitarra)">
@@ -43,7 +44,7 @@
     </table>
 
   </div>
-</div>
+
   <!-- <div id="article-item" *ngFor="let guitarra of guitarraService.guitarras">
       <h4>{{ guitarra.id }}</h4>
       <h4>{{ guitarra.marca }}</h4>
