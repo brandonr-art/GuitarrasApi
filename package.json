@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server/index.js",
     "start": "node server/index.js",
-    "heroku-postbuild": "cd frontend && npm install && ng build"
+    "heroku-postbuild": "cd frontend && npm install"
+    "postinstall": "cd frontend/package.json && ng build"
   },
   "keywords": [],
   "author": "",
@@ -19,10 +20,6 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.901.9",
-    "@angular/compiler-cli": "~9.1.11",
-    "@angular/compiler": "~9.1.11",
-    "@angular/cli": "^9.1.8",
     "nodemon": "^2.0.4"
   }
 }
