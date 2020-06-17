@@ -20,20 +20,27 @@ export class GuitarrasComponent implements OnInit {
   ngOnInit(){
     this.getGuitarras();
   }
-  editGuitarra(form: NgForm){
-    this.guitarraService.postGuitarra(form.value).subscribe(res =>{
-      this.resetForm(form);
-      M.toast({html: 'guardado'});
-    })
+  editGuitarra(guitarra:Guitarra){
+    this.guitarraService.selectedGuitarra = guitarra;
+    
 
   }
   
   addGuitarra(form: NgForm){
+if (form.value._id){
+  this.guitarraService.putGuitarra(form.value)
+  .subscribe(res =>{
+    console.log("Actualizado")
+  })
+    }else{
+
     this.guitarraService.postGuitarra(form.value).subscribe(res =>{
       console.log(form.value);
       this.resetForm(form);
+      this.getGuitarras();
            M.toast({html: 'guardado'});
-    })
+    });
+    }
   }
   getGuitarras(){
     this.guitarraService.getGuitarras()
@@ -45,7 +52,7 @@ export class GuitarrasComponent implements OnInit {
   }
  
 
-  resetForm(form: NgForm){
+  resetForm(form?: NgForm){
       if(form){
       form.reset();
       this.guitarraService.selectedGuitarra = new Guitarra();
