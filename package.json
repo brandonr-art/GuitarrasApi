@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server/index.js",
-    "start": "node server/index.js",
-    "postinstall": "ng serve --aot --prod"
+    "start": "node server/index.js"
   },
   "keywords": [],
   "author": "",
