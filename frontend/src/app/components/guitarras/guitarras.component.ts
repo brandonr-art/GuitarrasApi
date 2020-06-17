@@ -26,7 +26,7 @@ export class GuitarrasComponent implements OnInit {
 
   }
   
-  addGuitarra(form: NgForm){
+addGuitarra(form: NgForm){
 if (form.value._id){
   this.guitarraService.putGuitarra(form.value)
   .subscribe(res =>{
@@ -37,8 +37,9 @@ if (form.value._id){
     this.guitarraService.postGuitarra(form.value).subscribe(res =>{
       console.log(form.value);
       this.resetForm(form);
-      this.getGuitarras();
+      
            M.toast({html: 'guardado'});
+           this.getGuitarras();
     });
     }
   }

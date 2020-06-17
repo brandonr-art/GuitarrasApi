@@ -9,9 +9,7 @@
               <div class="card-content">
                 <form #guitarraForm="ngForm" (ngSubmit)="addGuitarra(guitarraForm)">
 
-                  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.id">
-
-                  <label for="id">Id</label><br />
+                    <label for="id">Id</label><br />
                   <input type="text" name="id" #id="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.id"
                     required />
 

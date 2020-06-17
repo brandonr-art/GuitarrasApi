@@ -92,6 +92,7 @@ export class ModificarComponent implements OnInit {
     if(confirm("¿Estas seguro de eliminar esa Guitarra?")){
       this.guitarraService.deleteGuitarra(id).subscribe(res =>{
         this.getGuitarras();
+        M.toast({html: 'Eliminado'});
       })
     }
     
