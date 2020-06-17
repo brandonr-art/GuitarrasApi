@@ -229,6 +229,11 @@ input[type="text"]:focus{
 #contenedor_tabla{
 	margin-left: 20%;
 }
+.container_menu_formulario{
+	width: 20%;
+	margin-left: 10px;
+}
+
 
 .mid-form{
 	width: 100%;
