@@ -18,6 +18,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "@angular/cli": "^9.1.8",
     "nodemon": "^2.0.4"
   }
 }

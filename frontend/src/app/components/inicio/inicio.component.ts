@@ -19,7 +19,7 @@ export class InicioComponent implements OnInit {
 
   constructor(
     public guitarraService: GuitarraService
-  ) {this.url ="http://localhost:3000/guitarras";
+  ) {this.url ="/guitarras";
 }
 
 ngOnInit() {
