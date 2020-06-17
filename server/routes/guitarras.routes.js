@@ -49,8 +49,19 @@ router.post('/', (req, res, next) => {
 });
 
 //PATCH modifica documento por id
-router.patch('/:idGui', (req,res, next) => {
-    Guitarra.findOneAndUpdate({id:req.params.idGui},{$set:req.body},{new: true},(err, datos) => {
+router.put('/:idGui', (req,res, next) => {
+    Guitarra.findOneAndUpdate({id:req.params.idGui},{$set:{
+        id: req.body.id,
+        modelo: req.body.modelo,
+        marca: req.body.marca,
+        color: req.body.color,
+        largo: req.body.largo,
+        ancho: req.body.ancho,
+        peso: req.body.peso,
+        tipo: req.body.tipo,
+        numCuerdas: req.body.numCuerdas,
+        imagen: req.body.imagen
+      }},(err, datos) => {
         if (err)
             res.status(404).json({mensaje:"Error al actualizar"});
         else
@@ -66,7 +77,7 @@ router.delete('/', (req, res, next) => {
 
 //DELETE elimina documento por id
 router.delete('/:idGui', (req, res, next) => {
-    Guitarra.findOneAndDelete({ id: req.params.idGui }, (err, datos) => {
+    Guitarra.findById({ id: req.params.idGui }, (err, datos) => {
         if (err)
             res.status(404).json(err);
         else
