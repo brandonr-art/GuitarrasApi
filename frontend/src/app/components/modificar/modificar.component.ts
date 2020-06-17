@@ -48,7 +48,7 @@ export class ModificarComponent implements OnInit {
   }
   
   addGuitarra(form: NgForm){
-    if (form.value._id){
+    if (form.value.id){
       this.guitarraService.putGuitarra(form.value)
       .subscribe(res =>{
         console.log("Actualizado")

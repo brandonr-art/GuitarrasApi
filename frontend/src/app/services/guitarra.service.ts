@@ -27,7 +27,7 @@ export  class GuitarraService {
     /* return this.http.put(this.URL_API + '/guitarras/'+'{guitarra.id}', guitarra); */
 
     return this.http.put(this.URL_API + '/guitarras/' +`${guitarra.id}` || this.URL_API_Remot + '/guitarras' +`/${guitarra.id}`, guitarra);
-
+   
   }
   deleteGuitarra(id: string){
     return this.http.delete(this.URL_API + '/guitarras' + `/${id}` || this.URL_API_Remot + '/guitarras' + `/${id}`)
