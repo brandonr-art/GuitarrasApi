@@ -79,7 +79,7 @@ router.delete('/', (req, res, next) => {
 
 //DELETE elimina documento por id
 router.delete('/:idGui', (req, res, next) => {
-    Guitarra.findById({ id: req.params.idGui }, (err, datos) => {
+    Guitarra.findOneAndDelete({ id: req.params.idGui }, (err, datos) => {
         if (err)
             res.status(404).json(err);
         else
