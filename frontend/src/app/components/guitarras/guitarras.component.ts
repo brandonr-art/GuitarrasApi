@@ -17,7 +17,7 @@ export class GuitarrasComponent implements OnInit {
     
    }
     
-  ngOnInit(): void {
+  ngOnInit(){
     this.getGuitarras();
   }
   editGuitarra(form: NgForm){
@@ -30,8 +30,9 @@ export class GuitarrasComponent implements OnInit {
   
   addGuitarra(form: NgForm){
     this.guitarraService.postGuitarra(form.value).subscribe(res =>{
+      console.log(form.value);
       this.resetForm(form);
-      M.toast({html: 'guardado'});
+           M.toast({html: 'guardado'});
     })
   }
   getGuitarras(){

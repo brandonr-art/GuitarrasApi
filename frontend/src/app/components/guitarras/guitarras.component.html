@@ -44,10 +44,10 @@
                   <label for="color">numCuerdas</label><br />
                   <input type="text" name="numCuerdas" #numCuerdas="ngModel"
                     [(ngModel)]="guitarraService.selectedGuitarra.numCuerdas" required />
-
-                    <label for="color">URL</label><br />
-                  <input type="text" name="imagen" #imagen="ngModel" [(ngModel)]="guitarraService.selectedGuitarra.imagen"
-                   required />
+                    <br />
+                    <label for="color">Imagen</label><br />
+                    <input type="text" name="imagen" #imagen="ngModel"
+                      [(ngModel)]="guitarraService.selectedGuitarra.imagen" required />
                   <br />
                   <div class="card-action">
                     <div class="input-field col-s11">
