@@ -45,7 +45,7 @@ export class GuitarrasComponent implements OnInit {
   }
  
 
-  resetForm(form?: NgForm){
+  resetForm(form: NgForm){
       if(form){
       form.reset();
       this.guitarraService.selectedGuitarra = new Guitarra();
